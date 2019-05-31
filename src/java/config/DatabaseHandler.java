@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class DatabaseHandler extends Configs {
 
-    Connection con;
+    Connection conn;
 
     public Connection getDbConnection()
             throws ClassNotFoundException, SQLException {
@@ -21,8 +21,8 @@ public class DatabaseHandler extends Configs {
         properties.setProperty("password",dbPass);
         properties.setProperty("useUnicode","true");
         properties.setProperty("characterEncoding","cp1251");
-        con = DriverManager.getConnection(url,properties);
+        conn = DriverManager.getConnection(url,properties);
 
-        return con;
+        return conn;
     }
 }
