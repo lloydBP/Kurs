@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <AnchorPane layoutY="30.0" prefHeight="370.0" prefWidth="800.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <TableView fx:id="tbView" layoutX="291.0" layoutY="-1.0" onMouseClicked="#mouseInfo" prefHeight="370.0" prefWidth="516.0">
+              <columns>
+
+                  <TableColumn fx:id="idColumn" editable="false" prefWidth="40.0" text="ID" />
+                <TableColumn fx:id="districtColumn" editable="false" prefWidth="94.0" text="Район" />
+                  <TableColumn fx:id="streetColumn" editable="false" prefWidth="100.0" text="Вулиця" />
+                  <TableColumn fx:id="numberColumn" editable="false" prefWidth="94.0" text="Будинок №" />
+                  <TableColumn fx:id="flatColumn" editable="false" prefWidth="106.0" text="Квартира №" />
+                  <TableColumn fx:id="memberColumn" editable="false" prefWidth="81.0" text="Власник" />
+              </columns>
+            </TableView>
+            <TextField fx:id="idText" editable="false" layoutX="118.0" layoutY="14.0" prefHeight="31.0" prefWidth="170.0" />
+            <TextField fx:id="dText" editable="false" layoutX="118.0" layoutY="52.0" prefHeight="31.0" prefWidth="170.0" />
+            <TextField fx:id="sText" editable="false" layoutX="118.0" layoutY="89.0" prefHeight="31.0" prefWidth="170.0" />
+            <TextField fx:id="numText" editable="false" layoutX="118.0" layoutY="126.0" prefHeight="31.0" prefWidth="170.0" />
+            <TextField fx:id="flatText" editable="false" layoutX="118.0" layoutY="163.0" prefHeight="31.0" prefWidth="170.0" />
+            <TextField fx:id="memberText" editable="false" layoutX="118.0" layoutY="200.0" prefHeight="31.0" prefWidth="170.0" />
+            <Label layoutX="37.0" layoutY="19.0" text="ID" />
+            <Label layoutX="37.0" layoutY="57.0" text="Район" />
+            <Label layoutX="34.0" layoutY="94.0" text="Вулиця" />
+            <Label layoutX="34.0" layoutY="131.0" text="Будинок" />
+            <Label layoutX="31.0" layoutY="168.0" text="Квартира" />
+            <Label layoutX="35.0" layoutY="205.0" text="Власник" />
+         </children>
+      </AnchorPane>
+      <MenuButton layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: #f39c63;" text="Меню" textFill="WHITE">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#addFlat" text="Додати" />
+          <MenuItem mnemonicParsing="false" onAction="#editFlat" text="Редагувати" />
+            <MenuItem mnemonicParsing="false" onAction="#searchFlat" text="Пошук" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteFlat" text="Видалення" />
+        </items>
+      </MenuButton>
+      <Label layoutX="282.0" layoutY="-1.0" prefHeight="32.0" prefWidth="248.0" text="Богдан Проданов" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Italic" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
